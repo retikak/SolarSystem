@@ -9,11 +9,31 @@
 import UIKit
 
 class PlanetDetailViewController: UIViewController {
+    
+    
+    @IBOutlet var planetImage: UIImageView!
+
+    @IBOutlet var planetNameLabel: UILabel!
+    
+    @IBOutlet var planetDistance: UILabel!
+    
+    @IBOutlet var planetDayLength: UILabel!
+    
+    @IBOutlet var planetDiameter: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        planetNameLabel.text = "Empty string"
+//        planetDayLength.text = "asdgasdgdfg"
+    }
+    
+    
+    func updateWithPlanet(planet: Planet) {
+//         planetImage.image = PlanetController.planets.image
+        self.title = planet.name
+//        planetDayLength.text = "\(planet.dayLength)"
+        planetNameLabel.text = planet.name
     }
 
     override func didReceiveMemoryWarning() {
